@@ -1,10 +1,17 @@
+#C:\Users\kimjaehee\AppData\Local\Programs\Python\Python310\dog310\Scripts
+
+
+#streamlit run D:\json\work\python\Test\Streamlit_run.py
+
 import streamlit as st
+
 from tinydb import TinyDB
 import pandas as pd
 import plotly.express as px
 
 # ✅ 1. TinyDB 데이터 읽기
-db = TinyDB(r"D:\json\work\python\Test\json_db.json", encoding='utf-8-sig')
+#db = TinyDB(r"D:\json\work\python\Test\json_db.json", encoding='utf-8-sig')
+db = TinyDB("json_db.json", encoding='utf-8-sig')
 records = db.all()
 df = pd.DataFrame(records)
 
